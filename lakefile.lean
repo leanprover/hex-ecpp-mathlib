@@ -1,34 +1,21 @@
 import Lake
-open Lake DSL System
+open System Lake DSL
 
-package HexECPPMathlib where
+package «hex-ecpp-mathlib» where
   leanOptions := #[⟨`doc.verso, true⟩, ⟨`doc.verso.suggestions, false⟩]
 
-require HexBasic from git
-  "https://github.com/leanprover/hex-basic.git" @ "a7de08cb8ff56c86e43ddb909e16df78e672a303"
-
 require HexArith from git
-  "https://github.com/leanprover/hex-arith.git" @ "4976aa3805cdbc1cbbb3853bcdb784467a754249"
-
+  "https://github.com/leanprover/hex-arith.git" @ "v0.7.0"
 require HexPrimality from git
-  "https://github.com/leanprover/hex-primality.git" @ "4717a54f0e128cc041df82a4274ab0db914cbdde"
-
+  "https://github.com/leanprover/hex-primality.git" @ "v0.7.0"
 require HexECPP from git
-  "https://github.com/leanprover/hex-ecpp.git" @ "ae0f33d6747b4469d50c2ee21d766791ce7ce855"
-
+  "https://github.com/leanprover/hex-ecpp.git" @ "v0.7.0"
 require HexPrimalityMathlib from git
-  "https://github.com/leanprover/hex-primality-mathlib.git" @ "3de013793db15f7d0f390360334006bc6fbfda13"
-
--- AINTLIB supplies Hasse's theorem and supports module clients.
+  "https://github.com/leanprover/hex-primality-mathlib.git" @ "v0.7.0"
 require AINTLIB from git
-  "https://github.com/CBirkbeck/AINTLIB.git" @
-    "ab1451487da02cd4483d0e2cdb2cc9e44bbbac17"
-
--- Keep Mathlib last so its compatible transitive pins win over AINTLIB
--- when resolving a fresh lockfile.
+  "https://github.com/CBirkbeck/AINTLIB.git" @ "ab1451487da02cd4483d0e2cdb2cc9e44bbbac17"
 require mathlib from git
-  "https://github.com/leanprover-community/mathlib4.git" @
-    "d870b9068518a0870842d15a0cd42637ec30b587"
+  "https://github.com/leanprover-community/mathlib4.git" @ "d870b9068518a0870842d15a0cd42637ec30b587"
 
 target hexecpppariio pkg : FilePath := do
   let oFile := pkg.dir / defaultBuildDir / "HexECPPMathlib" / "ffi" / "pari_pipe.o"
@@ -53,5 +40,9 @@ lean_lib HexECPPMathlibPariIO where
   precompileModules := true
   moreLinkObjs := #[hexecpppariio]
 
+@[default_target]
+lean_lib HexECPPMathlibModules where
+  globs := #[`HexECPPMathlib.Native, `HexECPPMathlib.Pari]
+
 lean_lib HexECPPMathlibTests where
-  globs := #[.one `HexECPPMathlib.Tests]
+  globs := #[`HexECPPMathlib.Tests]
