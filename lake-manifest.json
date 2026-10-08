@@ -7,10 +7,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "d870b9068518a0870842d15a0cd42637ec30b587",
+      "rev": "6b7abb3c7686292736be2955bd3eb9ebf63b456a",
       "name": "mathlib",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "d870b9068518a0870842d15a0cd42637ec30b587",
+      "inputRev": "6b7abb3c7686292736be2955bd3eb9ebf63b456a",
       "inherited": false,
       "configFile": "lakefile.lean"
     },
@@ -23,7 +23,7 @@
       "name": "AINTLIB",
       "manifestFile": "lake-manifest.json",
       "inputRev": "ab1451487da02cd4483d0e2cdb2cc9e44bbbac17",
-      "inherited": false,
+      "inherited": true,
       "configFile": "lakefile.toml"
     },
     {
@@ -31,10 +31,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "b73453552f8fd97de5af6dddb4781ccc4be14941",
+      "rev": "f67197964c8183c614716a2b742355e89f49d729",
       "name": "HexPrimalityMathlib",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "v0.7.0",
+      "inputRev": "v0.8.0",
       "inherited": false,
       "configFile": "lakefile.toml"
     },
@@ -43,10 +43,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "b42efd41a3caeeb3405576eca9f1bc04303f6106",
+      "rev": "e71c54bf04ebf5c37a38b7590a61aa428cb26e93",
       "name": "HexECPP",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "v0.7.0",
+      "inputRev": "v0.8.0",
       "inherited": false,
       "configFile": "lakefile.toml"
     },
@@ -55,10 +55,10 @@
       "type": "git",
       "subDir": null,
       "scope": "",
-      "rev": "66936d6d0fc662f30b1dbd1c9b19e293fa64794e",
+      "rev": "002d4127e8963cf2fbc4f7ebbd919ca67988a8e4",
       "name": "HexPrimality",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "v0.7.0",
+      "inputRev": "v0.8.0",
       "inherited": false,
       "configFile": "lakefile.toml"
     },
@@ -70,7 +70,7 @@
       "rev": "5ae42d0127e49eb3973ae01a5304a7adb2a9ee65",
       "name": "HexArith",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "v0.7.0",
+      "inputRev": "v0.8.0",
       "inherited": false,
       "configFile": "lakefile.lean"
     },
@@ -82,7 +82,7 @@
       "rev": "c5b9f3befd306eba663345c8d0bd3a252e3b803e",
       "name": "HexBasic",
       "manifestFile": "lake-manifest.json",
-      "inputRev": "v0.7.0",
+      "inputRev": "v0.8.0",
       "inherited": true,
       "configFile": "lakefile.toml"
     },
@@ -115,7 +115,7 @@
       "type": "git",
       "subDir": null,
       "scope": "leanprover-community",
-      "rev": "a6d31147557d4b044a3ce226768572919acc1def",
+      "rev": "10a2cfff285e1c7c2ebc49c0ba22cab0f3c58ee5",
       "name": "importGraph",
       "manifestFile": "lake-manifest.json",
       "inputRev": "main",
@@ -180,6 +180,18 @@
       "manifestFile": "lake-manifest.json",
       "inputRev": "v4.35.0-rc3",
       "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/TauCetiProject/TauCeti.git",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "1c497c347f615b3087cb605f8cf743e591376105",
+      "name": "TauCeti",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "1c497c347f615b3087cb605f8cf743e591376105",
+      "inherited": false,
       "configFile": "lakefile.toml"
     }
   ],
