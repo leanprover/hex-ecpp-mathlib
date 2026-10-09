@@ -5,13 +5,13 @@ package «hex-ecpp-mathlib» where
   leanOptions := #[⟨`doc.verso, true⟩, ⟨`doc.verso.suggestions, false⟩]
 
 require HexArith from git
-  "https://github.com/leanprover/hex-arith.git" @ "v0.8.0"
+  "https://github.com/leanprover/hex-arith.git" @ "v0.9.0"
 require HexPrimality from git
-  "https://github.com/leanprover/hex-primality.git" @ "v0.8.0"
+  "https://github.com/leanprover/hex-primality.git" @ "v0.9.0"
 require HexECPP from git
-  "https://github.com/leanprover/hex-ecpp.git" @ "v0.8.0"
+  "https://github.com/leanprover/hex-ecpp.git" @ "v0.9.0"
 require HexPrimalityMathlib from git
-  "https://github.com/leanprover/hex-primality-mathlib.git" @ "v0.8.0"
+  "https://github.com/leanprover/hex-primality-mathlib.git" @ "v0.9.0"
 require TauCeti from git
   "https://github.com/TauCetiProject/TauCeti.git" @ "1c497c347f615b3087cb605f8cf743e591376105"
 require mathlib from git
